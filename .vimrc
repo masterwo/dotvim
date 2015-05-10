@@ -21,6 +21,15 @@ set modelines=20
 				" Required:
 				call neobundle#begin(expand('~/.vim/bundle/'))
 
+" Plugins {{{
+	NeoBundle 'altercation/vim-colors-solarized'
+	NeoBundle 'jpalardy/vim-slime'
+	NeoBundle 'kien/ctrlp.vim'
+	NeoBundle 'nanotech/jellybeans.vim'
+	NeoBundle 'scrooloose/syntastic'
+	NeoBundle 'valloric/youCompleteMe'
+	NeoBundle 'vim-scripts/mru.vim'
+"}}}
 				" Let NeoBundle manage NeoBundle
 				" Required:
 				NeoBundleFetch 'Shougo/neobundle.vim'
@@ -38,15 +47,6 @@ set modelines=20
 				" this will conveniently prompt you to install them.
 				NeoBundleCheck
 " }}}
-" Plugins {{{
-	NeoBundle 'altercation/vim-colors-solarized'
-	NeoBundle 'jpalardy/vim-slime'
-	NeoBundle 'kien/ctrlp.vim'
-	NeoBundle 'nanotech/jellybeans.vim'
-	NeoBundle 'scrooloose/syntastic'
-	NeoBundle 'valloric/youCompleteMe'
-	NeoBundle 'vim-scripts/mru.vim'
-"}}}
 " Plugin settings {{{
 " Slime settings {{{
 	let g:slime_target = "tmux"
