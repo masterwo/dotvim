@@ -21,7 +21,6 @@ set modelines=20
 				" Required:
 				call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Plugins {{{
 	NeoBundle 'altercation/vim-colors-solarized'
 	NeoBundle 'jpalardy/vim-slime'
 	NeoBundle 'kien/ctrlp.vim'
@@ -29,7 +28,11 @@ set modelines=20
 	NeoBundle 'scrooloose/syntastic'
 	NeoBundle 'valloric/youCompleteMe'
 	NeoBundle 'vim-scripts/mru.vim'
-"}}}
+	NeoBundle 'vim-scripts/loremipsum'
+	NeoBundle 'rstacruz/sparkup'
+	NeoBundle 'SirVer/ultisnips'
+	NeoBundle 'honza/vim-snippets'
+	
 				" Let NeoBundle manage NeoBundle
 				" Required:
 				NeoBundleFetch 'Shougo/neobundle.vim'
@@ -47,12 +50,25 @@ set modelines=20
 				" this will conveniently prompt you to install them.
 				NeoBundleCheck
 " }}}
-" Plugin settings {{{
-" Slime settings {{{
+" Settings Colorscheme {{{ 
+	let g:solarized_termcolors= 16 
+	let g:solarized_termtrans = 0 
+	let g:solarized_degrade = 0 
+	let g:solarized_bold = 1 
+ 	let g:solarized_underline = 1 
+	let g:solarized_italic = 1 
+	let g:solarized_contrast = "normal"
+ 	let g:solarized_visibility= "normal"
+
+	syntax enable
+	set background=dark
+	colorscheme solarized
+" }}}
+" Settings Slime {{{
 	let g:slime_target = "tmux"
 	"let g:slime_python_ipython = 1
 " }}}
-" Syntastic settings {{{
+" Settings Syntastic {{{
 	let g:syntastic_python_python_use_codec=1
 	let g:syntastic_javascript_checkers = ['gjslint']
 	set statusline+=%#warningmsg#
@@ -64,10 +80,13 @@ set modelines=20
 	let g:syntastic_check_on_open = 1
 	let g:syntastic_check_on_wq = 0
 " }}}
-" }}}
-" Colorscheme {{{ 
-	set background=dark
-	colorscheme solarized
+" Settings UltiSnips {{{
+	let g:UltiSnipsExpandTrigger="<c-j>"
+	let g:UltiSnipsJumpForwardTrigger="<c-j>"
+	let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+	" " If you want :UltiSnipsEdit to split your window.
+	let g:UltiSnipsEditSplit="vertical"
 " }}}
 " Mappings {{{
 	let mapleader=","
