@@ -32,6 +32,7 @@ set modelines=20
 	NeoBundle 'rstacruz/sparkup'
 	NeoBundle 'SirVer/ultisnips'
 	NeoBundle 'honza/vim-snippets'
+	NeoBundle 'tomasr/molokai'
 	
 				" Let NeoBundle manage NeoBundle
 				" Required:
@@ -51,18 +52,19 @@ set modelines=20
 				NeoBundleCheck
 " }}}
 " Settings Colorscheme {{{ 
-	let g:solarized_termcolors= 16 
-	let g:solarized_termtrans = 0 
-	let g:solarized_degrade = 0 
-	let g:solarized_bold = 1 
- 	let g:solarized_underline = 1 
-	let g:solarized_italic = 1 
-	let g:solarized_contrast = "normal"
- 	let g:solarized_visibility= "normal"
+	" let g:solarized_termcolors= 16 
+	" let g:solarized_termtrans = 0 
+	" let g:solarized_degrade = 0 
+	" let g:solarized_bold = 1 
+ 	" let g:solarized_underline = 1 
+	" let g:solarized_italic = 1 
+	" let g:solarized_contrast = "normal"
+ 	" let g:solarized_visibility= "normal"
 
 	syntax enable
 	set background=dark
-	colorscheme solarized
+	let g:rehash256 = 1
+	colorscheme molokai
 " }}}
 " Settings Slime {{{
 	let g:slime_target = "tmux"
