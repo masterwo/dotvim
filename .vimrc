@@ -21,10 +21,10 @@ set modelines=20
 				" Required:
 				call neobundle#begin(expand('~/.vim/bundle/'))
 
+	NeoBundle 'pangloss/vim-javascript'
 	NeoBundle 'altercation/vim-colors-solarized'
 	NeoBundle 'jpalardy/vim-slime'
 	NeoBundle 'kien/ctrlp.vim'
-	NeoBundle 'nanotech/jellybeans.vim'
 	NeoBundle 'scrooloose/syntastic'
 	NeoBundle 'valloric/youCompleteMe'
 	NeoBundle 'vim-scripts/mru.vim'
@@ -32,7 +32,9 @@ set modelines=20
 	NeoBundle 'rstacruz/sparkup'
 	NeoBundle 'SirVer/ultisnips'
 	NeoBundle 'honza/vim-snippets'
+	NeoBundle 'nanotech/jellybeans.vim'
 	NeoBundle 'tomasr/molokai'
+	NeoBundle 'jaxbot/browserlink.vim'
 	
 				" Let NeoBundle manage NeoBundle
 				" Required:
@@ -64,7 +66,18 @@ set modelines=20
 	syntax enable
 	set background=dark
 	let g:rehash256 = 1
-	colorscheme molokai
+	colorscheme jellybeans	
+" }}}
+" Settings vim-javascript {{{
+	let g:javascript_conceal_function   = "ƒ"
+	let g:javascript_conceal_null       = "ø"
+	let g:javascript_conceal_this       = "@"
+	let g:javascript_conceal_return     = "⇚"
+	let g:javascript_conceal_undefined  = "¿"
+	let g:javascript_conceal_NaN        = "ℕ"
+	let g:javascript_conceal_prototype  = "¶"
+	let g:javascript_conceal_static     = "•"
+	let g:javascript_conceal_super      = "Ω"
 " }}}
 " Settings Slime {{{
 	let g:slime_target = "tmux"
